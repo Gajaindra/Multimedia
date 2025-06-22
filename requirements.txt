@@ -3,3 +3,4 @@ transformers
 torch
 pillow
 PyMuPDF
+gunicorn==21.2.0
