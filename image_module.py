@@ -11,9 +11,4 @@ def caption_image(image):
     output = model.generate(**inputs)
     return processor.decode(output[0], skip_special_tokens=True)
 
-def image_qa(image, question):
-    if image is None or not question:
-        return "Please provide both image and question."
-    inputs = processor(image.convert("RGB"), question, return_tensors="pt")
-    output = model.generate(**inputs)
-    return processor.decode(output[0], skip_special_tokens=True)
+# Remove image_qa function for memory optimization
