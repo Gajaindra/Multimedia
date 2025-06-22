@@ -1,5 +1,6 @@
 from transformers import pipeline
 
+# Load once globally
 qa_pipeline = pipeline("question-answering", model="distilbert-base-uncased-distilled-squad")
 
 def answer_question(context, question):
